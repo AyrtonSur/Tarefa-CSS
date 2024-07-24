@@ -1,0 +1,33 @@
+html {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+}  
+
+.header-pagina {
+    color: rgb(0, 0, 0);
+    background: rgba(201, 196, 196, 0.904);
+    width: 100%;
+    height: 4rem;
+    border: 0.1px;
+    border-style: solid;
+    border-color:rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+}
+
+section {
+    height: 100%;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap column;
+    align-content: center;
+}
+
+.section-title {
+    font-size: 100%;
+}
+
+.section-link {
+    font-size: 75%;
+}
