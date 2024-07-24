@@ -38,7 +38,7 @@ section {
    
 }
 
-img {
+.img-title {
     border-radius: 100%;
     border-style: solid;
 }
@@ -82,6 +82,7 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 .div-favs {
@@ -89,6 +90,7 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 ul {
@@ -96,6 +98,7 @@ ul {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+    
 }
 
 ul, 
@@ -104,10 +107,20 @@ ol {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+    height: 200px;
 }
+
 
 
 .div-hob-fav {
     display: flex;
+}
+
+li {
+    background-color:rgb(189, 189, 189);
+    display: flex;
+    flex-flow: nowrap column;
+    justify-content: center;
+    align-items: center;
 }
 
