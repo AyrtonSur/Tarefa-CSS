@@ -191,6 +191,10 @@ button:hover {
     bottom: 20px;
 }
 
+.link-pagina {
+    opacity: 0.5;
+}
+
 @media only screen and (max-width: 800px){
     .div-hob-fav {
         display: flex;
@@ -222,6 +226,8 @@ button:hover {
         height: 30%;
         box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
     }
+
+
 }
 
 @media only screen and (max-width: 560px){
