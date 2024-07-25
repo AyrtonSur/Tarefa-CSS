@@ -293,15 +293,6 @@ button a{
         align-content: center;
     }
 
-    .menu-toggle:checked ~ .menu-hamburguer {
-        display: none;
-    }
-
-    .div-hob-fav ul,
-    ol {
-        flex-flow: wrap row;
-    }
-
 }
 
 @media only screen and (max-width: 560px){
