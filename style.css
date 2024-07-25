@@ -47,7 +47,6 @@ main{
 
 .figure-pagina {
     display: inline;
-   
 }
 
 .img-title {
@@ -190,4 +189,73 @@ button:hover {
     position: relative;
     right: 30px;
     bottom: 20px;
+}
+
+@media only screen and (max-width: 800px){
+    .div-hob-fav {
+        display: flex;
+        width: 100%;
+        flex-flow: wrap column;
+    }
+
+    .div-favs {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .div-hobbies {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    li {
+        background-color:rgb(189, 189, 189);
+        display: flex;
+        flex-flow: nowrap column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 15%;
+        height: 30%;
+        box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+    }
+}
+
+@media only screen and (max-width: 560px){
+    html {
+        font-size: 2vmax;
+    }
+
+    .img-title {
+        height: 10vmax;
+        width: 10vmax;
+    }
+
+    li {
+        position: relative;
+        right: 20px;
+    }
+
+    nav {
+        width: 48vw;
+        justify-content: flex-end;
+    }
+
+    .div-contact {
+        width: 48vw;
+    }
+}
+
+@media only screen and (max-height: 600px){
+    .p-sub {
+        font-size: 2vmax;
+    }
+
+    .button-contact {
+        position: relative;
+        top: 0px;
+    }
 }
