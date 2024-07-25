@@ -153,6 +153,9 @@ span {
     width: 3.5vh;
     height: 3.5vh;
     align-self: center;
+    position: relative;
+    bottom: 5px;
+    right: 80px;
 }
 
 .estrutura-pagina {
@@ -181,4 +184,10 @@ button:hover {
     display: inline-flex;
     justify-content: flex-end;
     flex-flow: wrap row;
+}
+
+.button-contact {
+    position: relative;
+    right: 30px;
+    bottom: 20px;
 }
