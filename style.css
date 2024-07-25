@@ -191,7 +191,7 @@ button:hover {
     bottom: 20px;
 }
 
-.link-pagina {
+.link-pagina:hover{
     opacity: 0.5;
 }
 
