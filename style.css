@@ -1,7 +1,17 @@
 html {
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
-}  
+} 
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+
 
 .header-pagina {
     color: rgb(0, 0, 0);
@@ -31,7 +41,9 @@ section {
     font-size: 75%;
 }
 
-
+main{
+    flex: 1;
+}
 
 .figure-pagina {
     display: inline;
@@ -86,7 +98,7 @@ section {
 }
 
 .div-favs {
-    width: 50%;
+    width: 48%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -107,13 +119,14 @@ ol {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
-    height: 200px;
+    height: 100%;
 }
 
 
 
 .div-hob-fav {
     display: flex;
+    width: 100%;
 }
 
 li {
@@ -121,6 +134,51 @@ li {
     display: flex;
     flex-flow: nowrap column;
     justify-content: center;
+    align-items: flex-start;
+    width: 15%;
+    height: 80%;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+}
+
+footer {
+    background-color: rgb(189, 189, 189);
+    height: 7%;
+}
+span {
+    background-color: rgb(136, 132, 132);
+}
+
+.link-pagina {
+    border-radius: 100%;
+    width: 3.5vh;
+    height: 3.5vh;
+    align-self: center;
+}
+
+.estrutura-pagina {
+    width: 10%;
+    height: 10%;
+
+}
+
+nav {
+    width: 50%;
+    display: inline-flex;
+    justify-content: center;
+    flex-flow: wrap row;
+    height: 80%;
     align-items: center;
 }
 
+button:hover {
+    background-color: gray;
+    color: black;
+}
+
+.div-contact {
+    width: 49%;
+
+    display: inline-flex;
+    justify-content: flex-end;
+    flex-flow: wrap row;
+}
