@@ -128,7 +128,7 @@ ol {
 
 .div-hob-fav {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-around;
     width: 100%;
     min-height: 300px;
@@ -143,7 +143,7 @@ ol {
     background-size: cover;
     background-position: center;
     width: 120px;
-    height: 180px;
+    height: 150px;
     border-radius: 8px;
 }
 
@@ -225,7 +225,9 @@ footer {
 }
 span {
     background-color: rgb(136, 132, 132);
-    border-radius: 2px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    margin-left: 8px;
 }
 
 .link-pagina {
@@ -310,10 +312,10 @@ button a{
 
 @keyframes animacao {
     0% {
-        transform: scale(1)
+        transform: scale(1);
     }
     100% {
-        transform: scale(1.25)
+        transform: scale(1.5);
     }
 }
 
@@ -325,12 +327,16 @@ button a{
 }
 
 @media only screen and (max-width: 800px){
+    .div-hob-fav {
+        flex-wrap: wrap;
+    }
+
     .bar {
         width: 25px;
         height: 3px;
-        background-color: white;
+        background-color: black;
         margin: 4px 0;
-        transition: 0.4s;
+        transition: transform 0.3s ease, opacity 0.3s ease;
     }
 
     .nav-links {
@@ -339,7 +345,34 @@ button a{
 
     .menu-hamburguer {
         display: flex;
-        flex-flow: wrap column;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 25px;
+        cursor: pointer;
+        z-index: 20;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .menu-toggle:checked ~ .nav-links {
+        display: flex;
+        flex-flow: nowrap column;
+        align-content: center;
+    }
+
+    .menu-toggle:checked + .menu-hamburguer .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .menu-toggle:checked + .menu-hamburguer .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-toggle:checked + .menu-hamburguer .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
     }
 
     .navbar {
