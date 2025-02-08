@@ -28,6 +28,7 @@ body {
     padding-left: 2rem;
     justify-content: space-between;
     overflow: visible;
+    padding-right: 10px;
 }
 
 section {
@@ -285,7 +286,6 @@ button:hover {
     justify-content: center;
     flex-flow: wrap row;
     height: 80%;
-    padding-right: 10px;
     align-items: center;
 }
 
