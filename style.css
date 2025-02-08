@@ -25,7 +25,9 @@ body {
     border-style: solid;
     border-color:rgb(0, 0, 0);
     display: flex;
+    padding-left: 2rem;
     justify-content: space-between;
+    overflow: visible;
 }
 
 section {
@@ -42,7 +44,8 @@ section {
 }
 
 .section-link {
-    font-size: 75%;
+    position: relative;
+    font-size: 1rem;
 }
 
 main{
@@ -278,17 +281,18 @@ button:hover {
 
 .navbar {
     width: 100%;
-    width: 50%;
     display: inline-flex;
     justify-content: center;
     flex-flow: wrap row;
     height: 80%;
+    padding-right: 10px;
     align-items: center;
 }
 
 .nav-links {
     display: flex;
     width: 100%;
+    position: relative;
 }
 
 .nav-links li {
@@ -307,6 +311,7 @@ button a{
 }
 
 .menu-toggle {
+    position: absolute;
     display: none;
 }
 
@@ -341,6 +346,12 @@ button a{
 
     .nav-links {
         display: none;
+        position: absolute;
+        left: -20%;
+        top: 36.5px; /* Ajuste a posição para garantir que esteja abaixo do menu hambúrguer */
+        width: 100%; /* Certifique-se de que ocupe a largura total */
+        text-align: center;
+        z-index: 10; /* Certifique-se de que esteja acima de outros elementos */
     }
 
     .menu-hamburguer {
@@ -351,6 +362,7 @@ button a{
         height: 25px;
         cursor: pointer;
         z-index: 20;
+        position: relative; /* Adiciona posição relativa para o menu hambúrguer */
     }
 
     .menu-toggle {
