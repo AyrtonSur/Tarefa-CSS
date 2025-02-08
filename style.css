@@ -1,3 +1,7 @@
+* {
+    max-width: 100vw;
+}
+
 html {
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
@@ -26,7 +30,7 @@ body {
 
 section {
     height: 100%;
-    width: 25%;
+    min-width: 25%;
     display: flex;
     justify-content: center;
     flex-flow: wrap column;
@@ -63,7 +67,7 @@ main{
     border: 1px;
     border-style: solid;
     border-color:rgb(136, 132, 132);
-    height: 16rem;
+    min-height: 16rem;
 }
 
 .div-figura {
@@ -89,19 +93,17 @@ main{
 }
 
 .div-hobbies {
-    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    width: auto;
 }
 
 .div-favs {
-    width: 48%;
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    width: auto;
 }
 
 ul {
@@ -115,9 +117,10 @@ ul {
 ul, 
 ol {
     display: inline-flex;
-    width: 100%;
+    width: auto;
     display: flex;
     justify-content: space-evenly;
+    gap: 30px;
     height: 100%;
 }
 
@@ -125,26 +128,79 @@ ol {
 
 .div-hob-fav {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     width: 100%;
+    min-height: 300px;
 }
 
-li {
-    background-color:rgb(189, 189, 189);
+.list-hobbies li, ol li {
     display: flex;
     flex-flow: nowrap column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
-    width: 15%;
-    height: 80%;
     box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+    background-size: cover;
+    background-position: center;
+    width: 120px;
+    height: 180px;
+}
+
+.list-hobbies, ol {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list-hobbies li:nth-child(1) {
+    background-image: url(./assets/gaming.webp);
+}
+
+.list-hobbies li:nth-child(2) {
+    background-image: url(./assets/watching.webp);
+}
+
+.list-hobbies li:nth-child(3) {
+    background-image: url(./assets/watching-netflix.webp);
+}
+
+.list-hobbies li:nth-child(4) {
+    background-image: url(./assets/reading.png);
+}
+
+.list-hobbies li:nth-child(5) {
+    background-image: url(./assets/going-out.webp);
+}
+
+ol li:nth-child(1) {
+    background-image: url(./assets/hollow-knight.webp);
+}
+
+ol li:nth-child(2) {
+    background-image: url(./assets/Undertale.avif);
+}
+
+ol li:nth-child(3) {
+    background-image: url(./assets/Celeste.avif);
+}
+
+ol li:nth-child(4) {
+    background-image: url(./assets/Stardew-valley.jfif);
+}
+
+ol li:nth-child(5) {
+    background-image: url(./assets/Katana-zero.jfif);
 }
 
 footer {
     background-color: rgb(189, 189, 189);
     height: 7%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 span {
     background-color: rgb(136, 132, 132);
+    border-radius: 2px;
 }
 
 .link-pagina {
@@ -152,24 +208,18 @@ span {
     width: 3.5vh;
     height: 3.5vh;
     align-self: center;
-    position: relative;
-    bottom: 5px;
-    right: 80px;
 }
 
 .estrutura-pagina {
-    width: 10%;
-    height: 10%;
+
 
 }
 
-nav {
-    width: 50%;
-    display: inline-flex;
-    justify-content: center;
-    flex-flow: wrap row;
-    height: 80%;
-    align-items: center;
+.nav {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    min-width: min(300px, 20%);
 }
 
 button:hover {
@@ -178,17 +228,13 @@ button:hover {
 }
 
 .div-contact {
-    width: 49%;
-
     display: inline-flex;
     justify-content: flex-end;
     flex-flow: wrap row;
 }
 
 .button-contact {
-    position: relative;
-    right: 30px;
-    bottom: 20px;
+    max-height: 80%;
 }
 
 .link-pagina:hover{
@@ -202,6 +248,12 @@ button:hover {
 
 .navbar {
     width: 100%;
+    width: 50%;
+    display: inline-flex;
+    justify-content: center;
+    flex-flow: wrap row;
+    height: 80%;
+    align-items: center;
 }
 
 .nav-links {
@@ -210,7 +262,6 @@ button:hover {
 }
 
 .nav-links li {
-    background-color: rgba(201, 196, 196, 0.904);;
     box-shadow: none;
     align-items: center;
 }
@@ -253,37 +304,6 @@ button a{
         margin: 4px 0;
         transition: 0.4s;
     }
-    
-    .div-hob-fav {
-        display: flex;
-        width: 100%;
-        flex-flow: wrap column;
-    }
-
-    .div-favs {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .div-hobbies {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    li {
-        background-color:rgb(189, 189, 189);
-        display: flex;
-        flex-flow: wrap column;
-        justify-content: center;
-        align-items: flex-start;
-        width: 15%;
-        height: 30%;
-        box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
-    }
 
     .nav-links {
         display: none;
@@ -305,7 +325,7 @@ button a{
 
     .menu-toggle:checked ~ .nav-links {
         display: flex;
-        flex-flow: wrap column;
+        flex-flow: nowrap column;
         align-content: center;
     }
 
@@ -318,38 +338,14 @@ button a{
 
 }
 
-@media only screen and (max-width: 560px){
-    html {
-        font-size: 2vmax;
-    }
-
-    .img-title {
-        height: 10vmax;
-        width: 10vmax;
-    }
-
+@media only screen and (max-width: 600px){
     li {
         position: relative;
         right: 20px;
     }
 
-    nav {
-        width: 48vw;
-        justify-content: flex-end;
+    .div-title {
+        flex-direction: column;
     }
 
-    .div-contact {
-        width: 48vw;
-    }
-}
-
-@media only screen and (max-height: 600px){
-    .p-sub {
-        font-size: 2vmax;
-    }
-
-    .button-contact {
-        position: relative;
-        top: 0px;
-    }
 }
