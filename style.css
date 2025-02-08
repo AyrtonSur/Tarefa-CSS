@@ -229,8 +229,8 @@ span {
 }
 
 .link-pagina {
-    height: 4vw;
-    width: 4vw;
+    height: 4vmin;
+    width: 4vmin;
     border-radius: 100%;
     min-width: 24px;
     min-height: 24px;
